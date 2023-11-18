@@ -9,8 +9,8 @@ def readFromFile(file):
 
 def randomInstance(instanceSize, boardX, boardY):
     edges = []
-    x = [int(x) for x in range(boardX)]
-    y = [int(x) for x in range(boardY)]
+    x = [int(x) for x in range(boardX-1)]
+    y = [int(x) for x in range(boardY-1)]
     i = 0
     while len(edges) != instanceSize:
         point = [i, random.choice(x), random.choice(y)]
