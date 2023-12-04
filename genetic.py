@@ -28,8 +28,14 @@ class Individual(object):  # Klasa osobników
 
         return res
 
-    def mutate(self):
-        pass
+    def mutate(self, child):
+        while True:
+            geneA = random.randint(0, pointCount-1)
+            geneB = random.randint(0, pointCount-1)
+            if geneA != geneB:
+                child[geneA], child[geneB] = child[geneB], child[geneA]
+                break
+        return child
 
     def calDistance(self):
         totalDistance = 0
